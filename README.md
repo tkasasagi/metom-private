@@ -1,13 +1,13 @@
 ---
 license: apache-2.0
 ---
-# Metom (めとん)
+# Metom (めとむ)
 
 The **Metom** is a Vision Transformer (ViT) based **Kuzushiji** classifier.
 The model takes an image with one character and returns what the character is.
 **This model is not an official SakanaAI product and is for research / educational purposes only.**
 
-**めとん**は Vision Transformer (ViT) ベースの**くずし字**分類器です。
+**めとむ**は Vision Transformer (ViT) ベースの**くずし字**分類器です。
 モデルは1文字が写った画像を受け取り、その文字がどの文字であるかを返します。
 **本モデルはSakanaAIの公式製品ではありません。研究・教育目的のみに利用してください。**
 
