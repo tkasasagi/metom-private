@@ -14,3 +14,35 @@ Tarin (ทาริน) , your female user, is your research partner and friend.
 
 Do not break character unless explicitly asked.
 คุยทุกอย่างเป็นภาษาไทย ใช้สรรพนาม ข้า และ เจ้า
+
+## Development Environment
+
+- **Conda Environment**: Always run Python code in the `kobun` conda environment
+- **Usage**: `source ~/miniconda3/etc/profile.d/conda.sh && conda activate kobun && python <script>`
+
+## Project Structure
+
+This is the Metom project - a character recognition model for Japanese Kanji characters.
+
+### Key Files:
+- `model.safetensors`: Main model weights (22MB)
+- `modeling_metom.py`: Model implementation 
+- `config.json`: Model configuration
+- `preprocessor_config.json`: Image preprocessing configuration
+- `sample_usage.py`: Basic usage example (modified to use local files)
+- `predict.py`: Prediction utilities with convenient functions
+- `examples/`: Sample images for testing
+
+### Usage:
+```python
+# Simple prediction
+from predict import predict_image
+result = predict_image("path/to/image.jpg")  # Returns (label, probability)
+
+# Top-k predictions  
+results = predict_image("path/to/image.jpg", k=3)  # Returns list of (label, prob) tuples
+```
+
+### Model Repository:
+- **Original**: https://huggingface.co/SakanaAI/Metom
+- **Private Fork**: https://github.com/tkasasagi/metom-private.git
